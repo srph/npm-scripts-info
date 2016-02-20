@@ -10,8 +10,7 @@ npm i -S npm-scripts-info
 Add `scripts-info` to your `package.json`. Afterwards, `npm-scripts-info` through your scripts.
 ```js
 {
-  "name": "npm-scripts-info",
-  "version": "1.0.0",
+  "name": "my-project",
   "scripts": {
   	"info": "npm-scripts-info"
   },
