@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+var chalk = require('chalk');
+var info = require('../lib');
+
+var scripts = info();
+
+for ( var script in scripts ) {
+  var description = scripts[script];
+
+  console.log(chalk.blue(script) + ':');
+  console.log('  ' + chalk.green(description));
+}

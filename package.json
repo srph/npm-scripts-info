@@ -1,0 +1,22 @@
+{
+  "name": "npm-scripts-info",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "bin": "./bin/npm-scripts-info",
+  "author": "Kier Borromeo <seraphipod@gmail.com> (http://srph.github.io)",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "chai": "^3.5.0",
+    "mock-fs": "^3.7.0",
+    "sinon": "^1.17.3",
+    "rewire": "^2.5.1"
+  },
+  "dependencies": {
+    "chalk": "^1.1.1"
+  }
+}
