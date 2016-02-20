@@ -1,4 +1,4 @@
-## npm-scripts-info
+## npm-scripts-info [![npm version](http://img.shields.io/npm/v/npm-scripts-info.svg?style=flat-square)](https://npmjs.org/package/npm-scripts-info?style=flat-square) [![Build Status](https://img.shields.io/travis/srph/npm-scripts-info.svg?style=flat-square)](https://travis-ci.org/srph/npm-scripts-info?branch=master)
 Display the description of your npm scripts.
 
 ## Installation
