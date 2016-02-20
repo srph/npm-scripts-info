@@ -19,6 +19,7 @@ Add `scripts-info` to your `package.json`. Afterwards, `npm-scripts-info` throug
   	"watch:build": "Compiles the scripts and watches for changes.",
   	"start": "Kickstarts the application."
   }
+}
 ```
 Finally, run `npm run info`.
 
