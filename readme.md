@@ -7,7 +7,7 @@ npm i -S npm-scripts-info
 ```
 
 ## Usage
-Add `scripts-info` to your `package.json`, and then add `npm-scripts-info` through your scripts.
+Add `scripts-info` to your `package.json`. Afterwards, `npm-scripts-info` through your scripts.
 ```js
 {
   "name": "npm-scripts-info",
@@ -21,7 +21,7 @@ Add `scripts-info` to your `package.json`, and then add `npm-scripts-info` throu
   	"start": "Kickstarts the application."
   }
 ```
-Afterwards, run `npm run info`.
+Finally, run `npm run info`.
 
 ## Output
 ```bash
