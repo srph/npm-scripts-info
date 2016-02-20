@@ -1,4 +1,3 @@
-![preview](preview.png)
 ## npm-scripts-info
 Display the description of your npm scripts.
 
@@ -23,3 +22,6 @@ Add `scripts-info` to your `package.json`. Afterwards, `npm-scripts-info` throug
   }
 ```
 Finally, run `npm run info`.
+
+## Preview
+![preview](preview.png)
