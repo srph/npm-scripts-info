@@ -1,7 +1,7 @@
 {
   "name": "npm-scripts-info",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "Display the description of your npm scripts.",
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha tests"
