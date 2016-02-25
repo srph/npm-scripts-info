@@ -22,5 +22,14 @@ Add `scripts-info` to your `package.json`. Afterwards, `npm-scripts-info` throug
 ```
 Finally, run `npm run info`.
 
+## Custom Reporters
+You can customize the output by specifying a reporter.
+```bash
+npm-scripts-info -r=my-reporter
+```
+You can check the [default reporter](lib/reporter.js) to get the gist of how it works. It's very simple.
+
+**Note**: If you're publishing your own reporter, please prefix it with `npm-scripts-info` (e.g., `npm-scripts-info-my-reporter`) for searchability.
+
 ## Preview
 ![preview](preview.png)
