@@ -19,5 +19,8 @@
   "dependencies": {
     "chalk": "^1.1.1",
     "meow": "^3.7.0"
+  },
+  "scripts-info": {
+    "build": "Build stuff, I guess?"
   }
 }

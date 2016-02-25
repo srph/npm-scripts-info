@@ -9,7 +9,7 @@ var cli = meow([
   '  npm-scripts-info [hr]',
   '',
   'Options',
-  ' --help, -h          Display usage',
+  ' --help, -h         Display usage',
   ' --reporter, -r     Specify the custom reporter to be used',
   '',
   'Examples',
