@@ -1,6 +1,6 @@
 {
   "name": "npm-scripts-info",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Display the description of your npm scripts.",
   "main": "lib/index.js",
   "scripts": {
