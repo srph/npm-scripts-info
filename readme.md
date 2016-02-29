@@ -7,7 +7,7 @@ npm i -S npm-scripts-info
 ```
 
 ## Usage
-Add `scripts-info` to your `package.json`. Afterwards, `npm-scripts-info` through your scripts.
+Add the descriptions (`scripts-info`) to your `package.json`. Afterwards, add `npm-scripts-info` to your scripts.
 ```js
 {
   "name": "my-project",
