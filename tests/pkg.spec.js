@@ -4,7 +4,7 @@ var mock = require('mock-fs');
 var fs = require('fs');
 var getPkg = require('../lib/pkg');
 
-describe('getPkg', function() {
+describe('pkg', function() {
   it('should get the parsed package.json in the cwd', function() {
     var pkg = process.cwd() + '/package.json';
     var _fs = {};
