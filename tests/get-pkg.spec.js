@@ -5,13 +5,13 @@ var fs = require('fs');
 var getPkg = require('../lib/get-pkg');
 
 describe('getPkg', function() {
-  it('should get the package.json in the cwd', function() {
+  it('should get the parsed package.json in the cwd', function() {
     var pkg = process.cwd() + '/package.json';
     var _fs = {};
     _fs[pkg] = '{"hello": "world"}';
     mock(_fs);
 
-    expect(getPkg()).to.equal('{"hello": "world"}');
+    expect(getPkg()).to.eql({"hello": "world"});
     mock.restore();
   });
 

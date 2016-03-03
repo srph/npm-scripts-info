@@ -8,13 +8,10 @@ describe('npm-script-info', function() {
     var dummy = {};
 
     var revert = info.__set__('getPkg', function() {
-      return JSON.stringify({
-        'scripts-info': dummy
-      });
+      return { 'scripts-info': dummy };
     });
 
     expect(info()).to.eql(dummy);
-
     revert();
   });
 });
