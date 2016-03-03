@@ -7,7 +7,7 @@ describe('npm-script-info', function() {
   it('should extract `scripts-info` from package.json', function() {
     var dummy = {};
 
-    var revert = info.__set__('getPkg', function() {
+    var revert = info.__set__('pkg', function() {
       return { 'scripts-info': dummy };
     });
 

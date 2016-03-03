@@ -2,7 +2,7 @@ var expect = require('chai').expect;
 var sinon = require('sinon');
 var mock = require('mock-fs');
 var fs = require('fs');
-var getPkg = require('../lib/get-pkg');
+var getPkg = require('../lib/pkg');
 
 describe('getPkg', function() {
   it('should get the parsed package.json in the cwd', function() {
