@@ -19,5 +19,6 @@
   "dependencies": {
     "chalk": "^1.1.1",
     "meow": "^3.7.0"
-  }
+  },
+  "repository": "srph/npm-scripts-info"
 }
