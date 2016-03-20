@@ -17,8 +17,30 @@ describe('npm-script-info', function() {
     revert();
   });
 
-  it('should throw exception if no description found', function() {
+  it('should throw exception if there is no scripts property in `package.json`', function() {
     pkgJSON = {};
+
+    expect(function() {
+      info();
+    }).to.throw(Error, "Your `package.json` doesn't have npm scripts");
+  });
+
+  it('should throw exception if there are no scripts in the scripts property', function() {
+    pkgJSON = {
+      scripts: {},
+    };
+
+    expect(function() {
+      info();
+    }).to.throw(Error, "Your `package.json` doesn't have npm scripts");
+  });
+
+  it('should throw exception if no description found', function() {
+    pkgJSON = {
+      scripts: {
+        'not documented script': '',
+      },
+    };
 
     expect(function() {
       info();
@@ -30,7 +52,12 @@ describe('npm-script-info', function() {
       foo: 'bar',
     };
 
-    pkgJSON = { 'scripts-info': dummy };
+    pkgJSON = {
+      scripts: {
+        'not documented script': '',
+      },
+      'scripts-info': dummy,
+    };
 
     expect(info()).to.eql(dummy);
   });
