@@ -7,8 +7,10 @@ npm i -S npm-scripts-info
 ```
 
 ## Usage
+
+### Using the `scripts-info` property
 Add the descriptions (`scripts-info`) to your `package.json`. Afterwards, add `npm-scripts-info` to your scripts.
-```js
+```json
 {
   "name": "my-project",
   "scripts": {
@@ -22,6 +24,30 @@ Add the descriptions (`scripts-info`) to your `package.json`. Afterwards, add `n
 }
 ```
 Finally, run `npm run info`.
+
+### Usings scripts prefixed with `?`
+
+For modules with dozens of scripts it might be a better option to store the descriptions near the commands. `npm-scripts-info` allows to store the scripts descriptions in the `scripts` property. In order to add a script description, just prefix its name with `?`.
+
+```json
+{
+  "name": "my-project",
+  "scripts": {
+    "?info": "Display information about the scripts.",
+    "info": "npm-scripts-info",
+
+    "?watch:build": "Watch codebase, trigger build when source code changes",
+    "watch:build": "webpack --watch",
+
+    "?start": "echo Kickstarts the application.",
+    "start": "node index"
+  }
+}
+```
+
+Have you noticed the `echo` command in the `start` description? Hence the descriptions are inside the script property, they can be called using `npm run`. By adding the `echo` command to the description properties you can make valid scripts from them. Therefore, running `npm run ?start` will print the description of the `start` script. And the great thing is, `npm-scripts-info` is smart enough to fetch the description from the `echo` command!
+
+**NOTE:** The prefixed commands will be looked up for descriptions only if the `package.json` doesn't have a `scripts-info` property.
 
 ## Custom Reporters
 You can customize the output by specifying a reporter.
