@@ -32,5 +32,16 @@ You can check the [default reporter](lib/reporter.js) to get the gist of how it 
 
 **Note**: If you're publishing your own reporter, please prefix it with `npm-scripts-info` (e.g., `npm-scripts-info-my-reporter`) for searchability.
 
+## Default Descriptions
+
+Some of the npm scripts are standardized. `npm-scripts-info` provides default descriptions for them, if no custom description specified in `scripts-info`.
+
+* **info** - Display information about the scripts
+* **start** - Kickstart the application
+* **test** - Run the tests
+* **build** - Build the package
+* **watch** - Watch codebase, trigger build when source code changes
+* **cover** - Execute test coverage
+
 ## Preview
 ![preview](preview.png)
