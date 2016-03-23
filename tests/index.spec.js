@@ -90,4 +90,56 @@ describe('npm-script-info', function() {
       start: 'Custom start description',
     });
   });
+
+  it('should get script info from scripts property', function() {
+    pkgJSON = {
+      scripts: {
+        '?start': 'Custom start description',
+        start: 'node index',
+      },
+    };
+
+    expect(info()).to.eql({
+      start: 'Custom start description',
+    });
+  });
+
+  it('should remove `echo` from script description', function() {
+    pkgJSON = {
+      scripts: {
+        '?start': 'echo Custom start description',
+        start: 'node index',
+      },
+    };
+
+    expect(info()).to.eql({
+      start: 'Custom start description',
+    });
+  });
+
+  it('should remove `echo` and double quotes from script description', function() {
+    pkgJSON = {
+      scripts: {
+        '?start': 'echo "Custom start description"',
+        start: 'node index',
+      },
+    };
+
+    expect(info()).to.eql({
+      start: 'Custom start description',
+    });
+  });
+
+  it('should remove `echo` and single quotes from script description', function() {
+    pkgJSON = {
+      scripts: {
+        '?start': "echo 'Custom start description'",
+        start: 'node index',
+      },
+    };
+
+    expect(info()).to.eql({
+      start: 'Custom start description',
+    });
+  });
 });

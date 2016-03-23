@@ -18,7 +18,8 @@
   },
   "dependencies": {
     "chalk": "^1.1.1",
-    "meow": "^3.7.0"
+    "meow": "^3.7.0",
+    "unquote": "^1.1.0"
   },
   "repository": "srph/npm-scripts-info"
 }
