@@ -58,6 +58,22 @@ You can check the [default reporter](lib/reporter.js) to get the gist of how it 
 
 **Note**: If you're publishing your own reporter, please prefix it with `npm-scripts-info` (e.g., `npm-scripts-info-my-reporter`) for searchability.
 
+## Using the JavaScript API
+
+You can fetch the scripts descriptions from a `package.json` in JavaScript.
+
+``` js
+var getScriptsInfo = require('npm-scripts-info');
+var readPkgUp = require('read-pkg-up');
+
+readPkgUp
+  .then(function(result) {
+     var scriptsInfo = getScriptsInfo(result.pkg);
+     console.log(result.scriptsInfo);
+     //> { test: 'Run the tests' }
+  });
+```
+
 ## Default Descriptions
 
 Some of the npm scripts are standardized. `npm-scripts-info` provides default descriptions for them, if no custom description specified in `scripts-info`.

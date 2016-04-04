@@ -142,4 +142,22 @@ describe('npm-script-info', function() {
       start: 'Custom start description',
     });
   });
+
+  it('should use the passed in package.json instead of the one in the cwd', function() {
+    pkgJSON = {
+      scripts: {
+        '?start': "echo 'Custom start description'",
+        start: 'node index',
+      },
+    };
+
+    expect(info({
+      scripts: {
+        '?test': 'Run the tests',
+        'test': 'mocha',
+      }
+    })).to.eql({
+      test: 'Run the tests',
+    });
+  });
 });
