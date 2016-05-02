@@ -4,17 +4,22 @@
   "description": "Display the description of your npm scripts.",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha tests"
+    "info": "node lib/cli",
+    "test": "mocha tests && mos test",
+    "md": "mos",
+    "?md": "echo \"Update the markdown files\""
   },
   "bin": "./lib/cli.js",
   "author": "Kier Borromeo <seraphipod@gmail.com> (http://srph.github.io)",
   "license": "ISC",
   "devDependencies": {
-    "mocha": "^2.4.5",
     "chai": "^3.5.0",
+    "mocha": "^2.4.5",
     "mock-fs": "^3.7.0",
-    "sinon": "^1.17.3",
-    "rewire": "^2.5.1"
+    "mos": "^0.15.0",
+    "read-pkg-up": "^1.0.1",
+    "rewire": "^2.5.1",
+    "sinon": "^1.17.3"
   },
   "dependencies": {
     "chalk": "^1.1.1",
