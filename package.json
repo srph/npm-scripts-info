@@ -13,17 +13,17 @@
   "author": "Kier Borromeo <seraphipod@gmail.com> (http://srph.github.io)",
   "license": "ISC",
   "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^2.4.5",
-    "mock-fs": "^3.7.0",
-    "mos": "^0.15.0",
-    "read-pkg-up": "^1.0.1",
-    "rewire": "^2.5.1",
-    "sinon": "^1.17.3"
+    "chai": "^4.1.2",
+    "mocha": "^5.0.0",
+    "mock-fs": "^4.4.2",
+    "mos": "^1.3.1",
+    "read-pkg-up": "^3.0.0",
+    "rewire": "^3.0.2",
+    "sinon": "^4.2.2"
   },
   "dependencies": {
-    "chalk": "^1.1.1",
-    "meow": "^3.7.0",
+    "chalk": "^2.3.0",
+    "meow": "^4.0.0",
     "unquote": "^1.1.0"
   },
   "repository": "srph/npm-scripts-info"
