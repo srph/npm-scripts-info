@@ -5,9 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "info": "node lib/cli",
-    "test": "mocha tests && mos test",
-    "md": "mos",
-    "?md": "echo \"Update the markdown files\""
+    "test": "mocha tests"
   },
   "bin": "./lib/cli.js",
   "author": "Kier Borromeo <seraphipod@gmail.com> (http://srph.github.io)",
@@ -16,7 +14,6 @@
     "chai": "^4.1.2",
     "mocha": "^5.0.0",
     "mock-fs": "^4.4.2",
-    "mos": "^1.3.1",
     "read-pkg-up": "^3.0.0",
     "rewire": "^3.0.2",
     "sinon": "^4.2.2"
