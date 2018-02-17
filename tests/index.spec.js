@@ -143,6 +143,34 @@ describe('npm-script-info', function() {
     });
   });
 
+  it('should remove known `echo` flags from script description', function() {
+    pkgJSON = {
+      scripts: {
+        '?start1': "echo -e Custom start description",
+        start1: 'node index',
+        '?start2': "echo -n Custom start description",
+        start2: 'node index',
+        '?start3': "echo -e -n Custom start description",
+        start3: 'node index',
+        '?start4': "echo -en Custom start description",
+        start4: 'node index',
+        '?start5': "echo -en -x Custom start description",
+        start5: 'node index',
+        '?start6': "echo -enCustom start description",
+        start6: 'node index',
+      },
+    };
+
+    expect(info()).to.eql({
+      start1: 'Custom start description',
+      start2: 'Custom start description',
+      start3: 'Custom start description',
+      start4: 'Custom start description',
+      start5: '-x Custom start description',
+      start6: '-enCustom start description',
+    });
+  });
+
   it('should use the passed in package.json instead of the one in the cwd', function() {
     pkgJSON = {
       scripts: {

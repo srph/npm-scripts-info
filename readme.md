@@ -1,12 +1,7 @@
-<!--@ '# ' + package.name + ' ' + shields.flatSquare('npm', 'travis') -->
 # npm-scripts-info [![NPM version](https://img.shields.io/npm/v/npm-scripts-info.svg?style=flat-square)](https://www.npmjs.com/package/npm-scripts-info) [![Build status for master](https://img.shields.io/travis/srph/npm-scripts-info/master.svg?style=flat-square)](https://travis-ci.org/srph/npm-scripts-info)
-<!--/@-->
 
-<!--@package.description-->
 Display the description of your npm scripts.
-<!--/@-->
 
-<!--@installation()-->
 ## Installation
 
 This module is installed via npm:
@@ -14,7 +9,6 @@ This module is installed via npm:
 ```sh
 npm install npm-scripts-info --save
 ```
-<!--/@-->
 
 ## Usage
 
@@ -78,7 +72,6 @@ You can check the [default reporter](lib/reporter.js) to get the gist of how it 
 
 You can fetch the scripts descriptions from a `package.json` in JavaScript.
 
-<!--@example('example.js')-->
 ```js
 'use strict';
 var getScriptsInfo = require('npm-scripts-info');
@@ -93,7 +86,6 @@ readPkgUp()
      //    test: 'Run the tests' }
   });
 ```
-<!--/@-->
 
 ## Default Descriptions
 
@@ -110,22 +102,16 @@ Some of the npm scripts are standardized. `npm-scripts-info` provides default de
 
 ![preview](preview.png)
 
-<!--@license()-->
 ## License
 
 ISC © [Kier Borromeo](http://srph.github.io)
-<!--/@-->
 
-<!--@dependencies({ shield: 'flat-square' })-->
 ## <a name="dependencies">Dependencies</a> [![Dependency status for master](https://img.shields.io/david/srph/npm-scripts-info/master.svg?style=flat-square)](https://david-dm.org/srph/npm-scripts-info/master)
 
 - [chalk](https://github.com/chalk/chalk): Terminal string styling done right. Much color.
 - [meow](https://github.com/sindresorhus/meow): CLI app helper
 - [unquote](https://github.com/lakenen/node-unquote): Remove wrapping quotes from a string.
 
-<!--/@-->
-
-<!--@devDependencies({ shield: 'flat-square' })-->
 ## <a name="dev-dependencies">Dev Dependencies</a> [![devDependency status for master](https://img.shields.io/david/dev/srph/npm-scripts-info/master.svg?style=flat-square)](https://david-dm.org/srph/npm-scripts-info/master#info=devDependencies)
 
 - [chai](https://github.com/chaijs/chai): BDD/TDD assertion library for node.js and the browser. Test framework agnostic.
@@ -135,5 +121,3 @@ ISC © [Kier Borromeo](http://srph.github.io)
 - [read-pkg-up](https://github.com/sindresorhus/read-pkg-up): Read the closest package.json file
 - [rewire](https://github.com/jhnns/rewire): Easy dependency injection for node.js unit testing
 - [sinon](https://github.com/cjohansen/Sinon.JS): JavaScript test spies, stubs and mocks.
-
-<!--/@-->
